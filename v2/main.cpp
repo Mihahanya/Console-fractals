@@ -30,7 +30,7 @@ int main()
     double sw = GetSystemMetrics(SM_CXSCREEN), sh = GetSystemMetrics(SM_CYSCREEN);
 
     m m;
-    sf::Font font; font.loadFromFile("font0.ttf");
+    sf::Font font; font.loadFromFile("font1.ttf");
     sf::Event event;
     sf::Image imgGrad; imgGrad.loadFromFile("gradient.png");
 
