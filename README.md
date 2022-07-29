@@ -2,6 +2,8 @@
 
 The project implements the ability to zoom in and move around a fractal (Mandelbrot or Julia) in real time. The fractal is drawn using ASCII characters in the console.
 
+*For the program to work correctly, requires a console with support for color text output.*
+
 ```
                                  ```:,Y::```
                               `````:::!Tz*:````
