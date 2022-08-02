@@ -68,10 +68,11 @@ int julia(double x, double y, double cx, double cy, int k) {
 
 int main() 
 {
-    constexpr int size_w = 85, size_h = 50;
+    constexpr int size_w = 128/1.5, size_h = 72/1.5;
     constexpr double size_aspect = double(size_w) / size_h;
 
     csl::set_window(size_w*2, size_h+2, L"Console fractals");
+    system("");
 
     //const string gradient = " .,:oO0$";
     //const string gradient = " .:!/r(l1Z4H9W8$@";

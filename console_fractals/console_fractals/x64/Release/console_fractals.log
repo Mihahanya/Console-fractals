@@ -5,10 +5,12 @@ D:\PROJECTS\Console-fractals\console_fractals\console_fractals\console_fractals.
 D:\PROJECTS\Console-fractals\console_fractals\console_fractals\console_fractals.cpp(46,27): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
 D:\PROJECTS\Console-fractals\console_fractals\console_fractals\console_fractals.cpp(47,35): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
 D:\PROJECTS\Console-fractals\console_fractals\console_fractals\console_fractals.cpp(47,40): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
-D:\PROJECTS\Console-fractals\console_fractals\console_fractals\console_fractals.cpp(122,26): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\PROJECTS\Console-fractals\console_fractals\console_fractals\console_fractals.cpp(71,26): warning C4244: инициализация: преобразование "double" в "const int", возможна потеря данных
+D:\PROJECTS\Console-fractals\console_fractals\console_fractals\console_fractals.cpp(71,44): warning C4244: инициализация: преобразование "double" в "const int", возможна потеря данных
 D:\PROJECTS\Console-fractals\console_fractals\console_fractals\console_fractals.cpp(123,26): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\PROJECTS\Console-fractals\console_fractals\console_fractals\console_fractals.cpp(124,26): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
   Создание кода
-  2 of 127 functions ( 1.6%) were compiled, the rest were copied from previous compilation.
+  1 of 127 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
