@@ -32,7 +32,20 @@ int julia(double x, double y, double cx, double cy, int k) {
         double twoab = 2 * x * y;
         x = pow(x, 2) - pow(y, 2) + cx;
         y = twoab + cy;
-        if (pow(x, 2) + pow(y, 2) > 3) break;
+        if (pow(x, 2) + pow(y, 2) > 4) break;
+
+        n++;
+    }
+    return n;
+}
+
+int burning_ship(double x, double y, double cx, double cy, int k) {
+    int n = 0;
+    while (n < k) {
+        double twoab = abs(2 * x * y);
+        x = pow(x, 2) - pow(y, 2) + cx;
+        y = twoab + cy;
+        if (pow(x, 2) + pow(y, 2) > 4) break;
 
         n++;
     }
@@ -80,6 +93,8 @@ int main()
 
         if (KeyPress('1')) mode = 0;
         if (KeyPress('2')) mode = 1;
+        if (KeyPress('3')) mode = 2;
+        if (KeyPress('4')) mode = 3;
 
         if (KeyPress('I')) cy -= c_spd * scale * delta_time;
         if (KeyPress('K')) cy += c_spd * scale * delta_time;
@@ -96,6 +111,8 @@ int main()
 
                 if (mode == 0) n = julia(x, y, x, y, iter_n); // Mandelbrot
                 if (mode == 1) n = julia(x, y, cx, cy, iter_n); // Julia
+                if (mode == 2) n = burning_ship(x, y, x, y, iter_n); // Burning Ship
+                if (mode == 3) n = burning_ship(x, y, cx, cy, iter_n); // Burning Ship by point
 
                 int grdi = (double)n/iter_n*(gr_len-1);
                 int coli = (double)n/iter_n*(sizeof(csl::cols)/sizeof(WORD)-1);
@@ -110,10 +127,10 @@ int main()
 
         WriteConsoleOutput(csl::handle, frame, buff_size, buff_coord, &write_region);
 
-        csl::gotoxy(0, size_h-1);
+        csl::gotoxy(0, size_h);
         printf("fps: %.1f, scale: x%f, number of iterations: %i, cx: %f, cy: %f \n",
             1000/delta_time, 1/scale, iter_n, cx, cy);
-        printf("WASD - move, QE - zoom, XZ - change number of iterations, 1..2 - mods, IJKL - change component");
+        printf("WASD - move, QE - zoom, XZ - change number of iterations, 1..4 - mods, IJKL - change component");
     }
 
     return 0;
